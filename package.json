@@ -1,0 +1,23 @@
+{
+  "name": "launchpad-pong",
+  "version": "1.0.0",
+  "description": "A proof-of-concept pong game with launchpad integration",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node main/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Legonzaur/Launchpad-Pong.git"
+  },
+  "author": "Legonzaur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Legonzaur/Launchpad-Pong/issues"
+  },
+  "homepage": "https://github.com/Legonzaur/Launchpad-Pong#readme",
+  "devDependencies": {
+    "electron": "^5.0.5"
+  }
+}
