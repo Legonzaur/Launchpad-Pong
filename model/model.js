@@ -1,6 +1,6 @@
 class Model {
-    constructor() {
-        console.log("Model initialized")
+    constructor(view) {
+        this.view = view
       }
       
 }

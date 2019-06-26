@@ -7,8 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "main",
-            "program": "${workspaceFolder}/main/main.js"
+            "name": "npm start",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "start"
+            ],
+            "port": 9229
         },
         {
             "type": "node",
@@ -16,6 +20,13 @@
             "name": "Electron Main",
             "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
             "program": "${workspaceFolder}/main/main.js"
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "main",
+            "program": "${workspaceFolder}/main/main.js"
+        },
+        
     ]
 }
