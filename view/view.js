@@ -1,13 +1,11 @@
+const Window = require('./window');
 class View {
-    constructor(model) {
-      this.model = model
-        const Window = require('./window');
-        // this.electron = require('electron')
+    constructor() {
+        
         this.window = new Window()
-        console.log("View initialized")
       }
-      launchLaunchpadView(){
-
+      updateView(map){
+        this.window.updateWindow(map)
       }
 }
 
