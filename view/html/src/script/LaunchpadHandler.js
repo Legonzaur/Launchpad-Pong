@@ -23,9 +23,10 @@ class Launchpadhandler {
           }
     }
     updateLaunchpad(map){
-     
+      
+      var output = midiAccess.outputs.values().next().value
       //console.log(midiAccess.inputs.values().next().value)
-      connection: "closed"console.log(midiAccess.outputs.values().next().value)
+      output.send([0x90, 0, 3])
       /*var noteOnMessage = [0x90, 60, 0x7f];
       var output = midiAccess.outputs.get(portID);
       output.send( noteOnMessage );  //omitting the timestamp means send immediately.

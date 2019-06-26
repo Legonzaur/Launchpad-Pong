@@ -30,7 +30,7 @@ class Table {
       }else{
         if(key%16 == 0){
           this.player1.stop()
-        }else if ((key-7) == 0){
+        }else if ((key%16)-7 == 0){
           this.player2.stop()
         }
       }

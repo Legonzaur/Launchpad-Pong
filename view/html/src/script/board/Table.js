@@ -17,7 +17,7 @@ class Table {
 
     update(map){
       map.elements.forEach(element => {
-        console.log(element.y)
+        //console.log(element.y)
         let list = document.getElementsByClassName(element.name)
        //console.log(`element:${element.name} number:${list.length}`)
         for(let i = 0; i<list.length; i++){
