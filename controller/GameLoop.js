@@ -8,7 +8,7 @@ class GameLoop {
         
     }
     gameStart(){
-        this.delay = 1000;
+        this.delay = 250;
         this.interval = setInterval(gameLoop, this.delay)
         let View = this.view
 
@@ -18,7 +18,6 @@ class GameLoop {
             map.elements.forEach(element => {
                 element.update()
             });
-            console.log(View)
             View.updateView()
         }
     }

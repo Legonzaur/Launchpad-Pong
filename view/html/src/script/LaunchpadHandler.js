@@ -1,7 +1,8 @@
+var midiAccess = null;
 const { ipcRenderer } = require('electron')
 class Launchpadhandler {
     constructor() {
-        var midiAccess = null;
+        
         navigator.requestMIDIAccess().then(onMidiAccessSuccess, onMidiAccessFailure);
         function onMidiAccessSuccess(access) {
             midiAccess = access;
@@ -17,11 +18,18 @@ class Launchpadhandler {
           }
           
           function handleMidiMessage(e) {
-            ipcRenderer.send('asynchronous-message', e.data)
+            
+            ipcRenderer.sendSync('synchronous-message', e.data)
           }
     }
     updateLaunchpad(map){
-
+     
+      //console.log(midiAccess.inputs.values().next().value)
+      connection: "closed"console.log(midiAccess.outputs.values().next().value)
+      /*var noteOnMessage = [0x90, 60, 0x7f];
+      var output = midiAccess.outputs.get(portID);
+      output.send( noteOnMessage );  //omitting the timestamp means send immediately.
+      output.send( [0x80, 60, 0x40], window.performance.now() + 1000.0 );*/
     }
       
 }

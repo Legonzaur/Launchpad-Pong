@@ -13,7 +13,13 @@ class Player extends Element{
         this.nextDirection = 1;
     }
     update(){
-        this.x = this.x + this.nextDirection;
+        if(this.y + this.nextDirection>0 && this.y + this.nextDirection<map.sizey-1){
+                this.y = this.y + this.nextDirection;            
+        }
+        
+    }
+    stop(){
+        this.nextDirection = 0
     }
 
 }

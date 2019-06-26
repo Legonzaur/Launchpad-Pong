@@ -17,14 +17,22 @@ class Table {
 
     update(map){
       map.elements.forEach(element => {
-        let list = document.getElementsByClassName("player1")
-        //console.log(list)
-        /*.forEach(htmlElement => {
-          htmlElement.classList.remove("player1")
-        });*/
-        for(let i =0; i<((element.sizeY*2))-1; i++){
-   // console.log(`element:${element.name} y:${((element.y-element.sizeY+i)*16)} x:${element.x} total:${((element.y-element.sizeY+i)*16)+element.x}`)
-          document.getElementById(`cell${((element.y-element.sizeY+i)*16)+element.x}`).style.backgroundColor = element.color
+        console.log(element.y)
+        let list = document.getElementsByClassName(element.name)
+       //console.log(`element:${element.name} number:${list.length}`)
+        for(let i = 0; i<list.length; i++){
+          //list[i].className = ""
+          list[i].style.backgroundColor = "white"
+        }
+        for(let j =0; j<((element.sizeY*2))+1; j++){
+          //console.log(element.y)
+          // console.log(`element:${element.name} y:${((element.y-element.sizeY+i)*16)} x:${element.x} total:${((element.y-element.sizeY+i)*16)+element.x}`)
+          let cell = document.getElementById(`cell${(((element.y-element.sizeY)+j)*16)+element.x}`)
+          if(cell){
+            cell.style.backgroundColor = element.color
+            cell.className = element.name
+          }
+          
         }
     });
     }
