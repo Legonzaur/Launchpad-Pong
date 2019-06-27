@@ -18,6 +18,10 @@ class Window {
 
     }   
 
+    set winner(element){
+        win.webContents.send("asynchronous-message", "gameOver")
+    }
+
     initWindow(){
         createWindow(); 
 
@@ -39,6 +43,7 @@ class Window {
         }
     }
     updateWindow(){
+        
         win.webContents.send("asynchronous-message", "updateWindow")
     }
 

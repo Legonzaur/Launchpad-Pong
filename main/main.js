@@ -20,11 +20,13 @@ player1.x = 0
 player1.y = Math.floor(map.sizey/2)-1
 player1.color = "blue"
 player1.name = "player1"
+player1.sizeY = 1
 
 player2.x = map.sizey-1
 player2.y = Math.floor(map.sizey/2)-1
 player2.color = "red"
 player2.name = "player2"
+player2.sizeY = 1
 
 ball.x= Math.floor(map.sizex/2)-1
 ball.y= Math.floor(map.sizey/2)-1

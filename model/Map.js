@@ -3,6 +3,7 @@ class Map {
         this.sizex = x;
         this.sizey = y
         this.elements = []
+        this.winner = null;
     }
     
     addToMap(element){

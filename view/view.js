@@ -4,6 +4,9 @@ class View {
         
         this.window = new Window()
       }
+      set winner(element){
+        this.window.winner = element
+      }
       updateView(map){
         this.window.updateWindow(map)
       }

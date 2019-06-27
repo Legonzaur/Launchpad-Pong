@@ -3,13 +3,12 @@ class GameLoop {
         this.model = model
         this.view = view
         this.map = map;
-        this.interval = null;
         this.changed = 0
         
     }
     gameStart(){
-        this.delay = 250;
-        this.interval = setInterval(gameLoop, this.delay)
+        this.delay = 100;
+        var interval = setInterval(gameLoop, this.delay)
         let View = this.view
 
         function gameLoop(){
@@ -19,8 +18,17 @@ class GameLoop {
                 element.update()
             });
             View.updateView()
+            if(map.winner){
+                console.log("win")
+                clearInterval(interval)
+                
+            }
+        }
+        function win(winner){
+            View.winner = winner;
         }
     }
+    
     
 }
 

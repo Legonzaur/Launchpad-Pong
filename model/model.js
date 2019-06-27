@@ -12,12 +12,12 @@ class Model {
       ipcMain.on('asynchronous-message', (event, arg) => {
         
           //event.reply('asynchronous-reply', 'pong')
-          console.log("async")
+          //console.log("async")
         
       })
 
       ipcMain.on('synchronous-message', (event, arg) => {
-        console.log("synchro")
+        //console.log("synchro")
         if(arg == "getMap"){
           event.returnValue = this.map
         }else{

@@ -28,6 +28,8 @@ ipcRenderer.on('asynchronous-message', (event, arg) => {
     map = ipcRenderer.sendSync('synchronous-message', 'getMap')
     updater.update(map)
     //launchpad.updateLaunchpad(map)
+  }else if(arg=="gameOver"){
+    var map = ipcRenderer.sendSync('synchronous-message', 'getMap')
   }
 
 })
